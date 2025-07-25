@@ -10,9 +10,11 @@ Add this flake to your `flake.nix` file:
   inputs = {
     fcitx5-simple-theme.url = "github:Beriholic/fcitx5-simple-theme";
   };
+}
 ```
 
 ```nix
+{
   environment.systemPackages = [
     inputs.fcitx5-simple-theme.packages.${pkgs.system}.fcitx5-dark-theme
     inputs.fcitx5-simple-theme.packages.${pkgs.system}.fcitx5-white-theme
@@ -20,4 +22,5 @@ Add this flake to your `flake.nix` file:
     # or
     inputs.fcitx5-simple-theme.defaultPackage.${pkgs.system}
   ];
+}
 ```
